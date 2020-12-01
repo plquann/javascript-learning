@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HOMEWORK 3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">HOMEWORK 3 - JAVASCRIPT</h1>
+      <div class="row py-4">
+        <div class="col-5 mr-5">
+          <h2>Excises 1: Sort numbers in ascending order</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="num1"
+                placeholder="Input Number 1"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="num2"
+                placeholder="Input Number 2"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="num3"
+                placeholder="Input Number 3"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnSort" type="button">
+              Sorting
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span>Result: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result1"
+              >0</span
+            >
+          </div>
+        </div>
+        <div class="col-5 ml-5">
+          <h2>Excises 2: Say Hello to member of family</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <select class="form-control" id="selectMem">
+                <option selected>Choose your family's member</option>
+                <option>Father</option>
+                <option>Mother</option>
+                <option>Brother</option>
+                <option>Sister</option>
+              </select>
+            </div>
+            <button class="btn btn-success" style = "margin-top: 105px;"id="btnHello" type="button">
+              Say Hello
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span>Result: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result2"
+              >Hello</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-5 mr-5">
+          <h2>Excises 3: Even/Odd Numbers</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="numA"
+                placeholder="Input Number A"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="numB"
+                placeholder="Input Number B"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="numC"
+                placeholder="Input Number C"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnCalc" type="button">
+              Calculate
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="mr-2">Even Number: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="even"
+              >0</span
+            >
+            <span class="mr-2 ml-4">Odd Number: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="odd"
+              >0</span
+            >
+          </div>
+        </div>
+        <div class="col-5 ml-5">
+          <h2>Excises 4: Types of triangle</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="length1"
+                placeholder="Input lengths of sides 1"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="length2"
+                placeholder="Input lengths of sides 2"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="length3"
+                placeholder="Input lengths of sides 3"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnTypes" type="button">
+              Types
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="mr-2">Types: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result4"
+              >none</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/ex1.js"></script>
+    <script src="./js/ex2.js"></script>
+    <script src="./js/ex3.js"></script>
+    <script src="./js/ex4.js"></script>
+  </body>
+</html>

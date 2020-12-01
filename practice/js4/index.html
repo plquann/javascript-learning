@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HOMEWORK 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">HOMEWORK 4 - JAVASCRIPT FUNCTION</h1>
+      <div class="row">
+        <div class="col-6">
+          <h1>Ex1: Admissions Management</h1>
+          <form action="">
+            <div class="form-group">
+              <input
+                id="point1st"
+                type="text"
+                class="form-control"
+                placeholder="Input first point"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="point2nd"
+                type="text"
+                class="form-control"
+                placeholder="Input second point"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="point3rd"
+                type="text"
+                class="form-control"
+                placeholder="Input third point"
+              />
+            </div>
+            <div class="form-group">
+              <label for="" style="padding-right: 21px"
+                >Select Priority Area:
+              </label>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="areaA"
+                  type="radio"
+                  class="form-check-input"
+                  value="A"
+                  name="priorityArea"
+                />
+                <label for="areaA" class="form-check-label">A</label>
+              </div>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="areaB"
+                  type="radio"
+                  class="form-check-input"
+                  value="B"
+                  name="priorityArea"
+                />
+                <label for="areaB" class="form-check-label">B</label>
+              </div>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="areaC"
+                  type="radio"
+                  class="form-check-input"
+                  value="C"
+                  name="priorityArea"
+                />
+                <label for="areaC" class="form-check-label">C</label>
+              </div>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="areaX"
+                  type="radio"
+                  class="form-check-input"
+                  value="X"
+                  name="priorityArea"
+                  checked
+                />
+                <label for="areaX" class="form-check-label">X</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Select Priority Subject: </label>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="subject1"
+                  type="radio"
+                  class="form-check-input"
+                  value="1"
+                  name="prioritySubject"
+                />
+                <label for="subject1" class="form-check-label">1</label>
+              </div>
+              <div
+                class="form-check form-check-inline"
+                style="margin-left: 26px"
+              >
+                <input
+                  id="subject2"
+                  type="radio"
+                  class="form-check-input"
+                  value="2"
+                  name="prioritySubject"
+                />
+                <label for="subject2" class="form-check-label">2</label>
+              </div>
+              <div
+                class="form-check form-check-inline"
+                style="margin-left: 27px"
+              >
+                <input
+                  id="subject3"
+                  type="radio"
+                  class="form-check-input"
+                  value="3"
+                  name="prioritySubject"
+                />
+                <label for="subject3" class="form-check-label">3</label>
+              </div>
+              <div
+                class="form-check form-check-inline"
+                style="margin-left: 25px"
+              >
+                <input
+                  id="subject0"
+                  type="radio"
+                  class="form-check-input"
+                  value="0"
+                  name="prioritySubject"
+                  checked
+                />
+                <label for="subject0" class="form-check-label">0</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                id="standard"
+                type="text"
+                placeholder="Input Standard Point"
+              />
+            </div>
+            <button id="calc" type="button" class="btn btn-success">
+              Calculate
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="d-inline-block py-2 bg-info mt-2" id="result1"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <h1>Ex2: Electric Bill</h1>
+          <form action="">
+            <div class="form-group">
+              <input
+                id="nameCus"
+                type="text"
+                class="form-control"
+                placeholder="Input customer name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="kW"
+                type="text"
+                class="form-control"
+                placeholder="Input the amount of electric consumed"
+              />
+            </div>
+            <button id="calcElect" type="button" class="btn btn-success">
+              Calculate
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="d-inline-block py-2 bg-info mt-2" id="bill"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <h1>Ex3: Personal income tax calculation</h1>
+          <form action="">
+            <div class="form-group">
+              <input
+                id="name"
+                type="text"
+                class="form-control"
+                placeholder="Input name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="totalIncome"
+                type="text"
+                class="form-control"
+                placeholder="Input total income"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="dependPeople"
+                type="text"
+                class="form-control"
+                placeholder="Input depend people"
+              />
+            </div>
+            <button id="calcTax" type="button" class="btn btn-success">
+              Calculate
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="d-inline-block py-2 bg-info mt-2" id="tax"></span>
+          </div>
+        </div>
+        <div class="col-6">
+          <h1>Ex4: Cable television bill</h1>
+          <form action="">
+            <div class="form-group">
+              <label for="">Select Subscription Type: </label>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="typeFam"
+                  type="radio"
+                  class="form-check-input"
+                  value="1"
+                  name="Subscription Type"
+                  checked
+                />
+                <label for="areaA" class="form-check-label">FAMILY</label>
+              </div>
+              <div class="form-check form-check-inline ml-4">
+                <input
+                  id="typeCorp"
+                  type="radio"
+                  class="form-check-input"
+                  value="B"
+                  name="Subscription Type"
+                />
+                <label for="typeCorp" class="form-check-label">CORPORATE</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                id="accounts"
+                type="text"
+                class="form-control"
+                placeholder="Input account number"
+                disabled
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="chanels"
+                type="text"
+                class="form-control"
+                placeholder="Input number of channels"
+              />
+            </div>
+            <button id="calcCable" type="button" class="btn btn-success">
+              Calculate
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="d-inline-block py-2 bg-info mt-2" id="cable"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/ex1.js"></script>
+    <script src="./js/ex2.js"></script>
+    <script src="./js/ex3.js"></script>
+    <script src="./js/ex4.js"></script>
+  </body>
+</html>

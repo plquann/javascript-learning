@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HOMEWORK 3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">HOMEWORK 3 - JAVASCRIPT(ADVANCE)</h1>
+      <div class="row py-4">
+        <div class="col-5 mr-5">
+          <h2>Excises 1: Next/Previous Day</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="day"
+                placeholder="Input Day"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="month"
+                placeholder="Input Month"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="year"
+                placeholder="Input Year"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnNextDay" type="button">
+              Next Day
+            </button>
+            <button class="btn btn-success" id="btnPrevDay" type="button">
+              Previous Day
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span>Result: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result1"
+              >0</span
+            >
+          </div>
+        </div>
+        <div class="col-5 ml-5">
+          <h2>Excises 2: Days of Month</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="monthDay"
+                placeholder="Input Month"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="yearDay"
+                placeholder="Input Year"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnDay" type="button">
+                Number of Days
+            </button>
+            
+          </form>
+          <div class="font-weight-bold">
+            <span>Number of Days:</span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result2"
+              >0</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-5 mr-5">
+          <h2>Excises 3: Spelling Number</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="num"
+                placeholder="Input Number"
+                class="form-control"
+                maxlength="21"
+              />
+            </div>
+            <button class="btn btn-success" id="btnVie" type="button">
+              Read
+            </button>
+            <!-- <button class="btn btn-success" id="btnEng" type="button">
+              English
+            </button> -->
+          </form>
+          <div class="font-weight-bold">
+            <span class="mr-2">Result: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result3"
+              >none</span
+            >
+          </div>
+        </div>
+        <div class="col-5 ml-5">
+          <h2>Excises 4:</h2>
+          <form action="" class="form-group">
+            <div class="form-group">
+              <label for="">Input Student 1</label>
+              <input
+                type="text"
+                id="name1"
+                placeholder="Input name"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="x1"
+                placeholder="Input x"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="y1"
+                placeholder="Input y"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Input Student 2</label>
+              <input
+                type="text"
+                id="name2"
+                placeholder="Input name"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="x2"
+                placeholder="Input x"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="y2"
+                placeholder="Input y"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Input Student 3</label>
+              <input
+                type="text"
+                id="name3"
+                placeholder="Input name"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="x3"
+                placeholder="Input x"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="y3"
+                placeholder="Input y"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Input location of school</label>
+              <input
+                type="text"
+                id="xSchool"
+                placeholder="Input x"
+                class="form-control"
+              />
+              <input
+                type="text"
+                id="ySchool"
+                placeholder="Input y"
+                class="form-control"
+              />
+            </div>
+            <button class="btn btn-success" id="btnCalc" type="button">
+              who farthest
+            </button>
+          </form>
+          <div class="font-weight-bold">
+            <span class="mr-2">Result: </span>
+            <span
+              class="d-inline-block border border-primary px-3 py-2"
+              id="result4"
+              >none</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/ex1.js"></script>
+    <script src="./js/ex2.js"></script>
+    <script src="./js/ex3.js"></script>
+    <script src="./js/ex4.js"></script>
+    
+  </body>
+</html>

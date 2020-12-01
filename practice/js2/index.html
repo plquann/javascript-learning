@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript Basic</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center mb-5">HOMEWORK 2 - Javascript Basic</h1>
+    <div class="container">
+      <div class="Exercise-1 mt-5">
+        <h2 class="text-center">Area and Perimeter of Rectangle</h2>
+        <form>
+          <div class="form-group">
+            <label for="length">Input Length:</label>
+            <input type="number" class="form-control" id="length" value="0"/>
+          </div>
+          <div class="form-group">
+            <label for=" width">Input Width:</label>
+            <input type="number" class="form-control" id="width" value="0"/>
+          </div>
+        </form>
+        <button type="button" class="btn btn-primary" id="btnCalc">calculate</button>
+        <div class="result mt-3">
+            <span class="font-weight-bold mr-2">Area: </span>
+            <span class="d-inline-block  border border-primary px-5  py-2" id="area">0</span>
+            <span class="font-weight-bold mr-2 ml-4">Perimeter: </span>
+            <span class="d-inline-block  border border-primary px-5 py-2" id="perimeter">0</span>
+        </div>
+      </div>
+      
+      <div class="Exercise-2 my-5">
+        <h2 class="text-center">Calculate Digit Sum</h2>
+        <form>
+            <div class="form-group">
+              <label for="num">Input Number:</label>
+              <input type="number" class="form-control" id="num" value="0"/>
+            </div>
+            
+          </form>
+        <button type="button" class="btn btn-primary" id="btnCalcDigit">calculate</button>
+        <div class="result mt-3">
+            <span class="font-weight-bold mr-2">Digit sum: </span>
+            <span class="d-inline-block  border border-primary px-5  py-2" id="sumDigit">0</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
