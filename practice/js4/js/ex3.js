@@ -38,6 +38,6 @@ document.getElementById("calcTax").addEventListener("click", function () {
     var taxable = calcTaxableIncome(income, dependPeople);
     var totalTax = calcTax(taxable);
 
-    document.getElementById("tax").innerHTML = name + " have to pay " + totalTax + " million VND for personal income tax.";
+    document.getElementById("tax").innerHTML = name + " has to pay " + totalTax + " million VND for personal income tax.";
 
 })
