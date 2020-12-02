@@ -1,5 +1,6 @@
 var units = [' không', ' một ', ' hai ', ' ba ', ' bốn ', ' năm ', ' sáu ', ' bảy ', ' tám ', ' chín '];
 var unitsName = ['', ' ngàn ', ' triệu ', ' tỷ '];
+
 function spellingTwoDigitsVie(unit, ten) {
     var resultTwoDigit = "";
     if (ten === 1) {
@@ -25,9 +26,11 @@ function spellingTwoDigitsVie(unit, ten) {
     }
     return resultTwoDigit;
 }
+
 function spellingThreeDigitsVie(num) {
     var length = num.toString().length;
     var result = "";
+    
     var digitFirst = Math.floor(num / 100);
     var digitSecond = Math.floor(num % 100 / 10);
     var digitThird = num % 100 % 10;
@@ -61,12 +64,13 @@ function spellingThreeDigitsVie(num) {
             }
             break;
     }
+    
     return result;
 }
+
 function spellingNumberVie(num) {
     var isSpell = "";
     var flag = 0;
-    
     var check = "";
     
     do {
@@ -102,6 +106,7 @@ function spellingNumberVie(num) {
 document.getElementById("btnVie").addEventListener("click", function () {
     var num = document.getElementById("num").value;
     var spell = "";
+    
     if(num.length > 12 && num.length <= 21){
         var numString1 = num.slice(-12, num.length);
         var numString2 = num.slice(0, (num.length -12))+"000";
