@@ -1,9 +1,10 @@
 var listEmployees = [];
+var validator = new Validator();
 
 getLocal();
 displayListEmployees(listEmployees);
 
-document.getElementById("btnThem").addEventListener("click", function(){
+document.getElementById("btnThem").addEventListener("click", function () {
     document.getElementById("msnv").disabled = false;
     document.getElementById("formNV").reset();
     document.getElementById("header-title").innerHTML = "Thêm nhân viên";
@@ -20,10 +21,19 @@ document.getElementById("btnThemNV").addEventListener("click", function () {
     var _dateStart = document.getElementById("datepicker").value;
     var _position = document.getElementById("chucvu").value;
 
-    var employee = new Employee(_code, _name, _email, _password, _dateStart, _position);
-    listEmployees.push(employee);
-    saveLocal();
-    displayListEmployees(listEmployees);
+    var isValid = validator.checkNull(_code, "tbMaNV") &&
+        validator.checkNumber(_code, "tbMaNV") && 
+        validator.checkLength(_code, "tbMaNV", 2, 20) &&
+        validator.checkNull(_name, "tbTen");
+    isValid &= validator.checkNull(_name, "tbTen");
+    isValid &= validator.checkNull(_email, "tbEmail") && validator.checkEmail(_email, "tbEmail");
+    
+    if (isValid) {
+        var employee = new Employee(_code, _name, _email, _password, _dateStart, _position);
+        listEmployees.push(employee);
+        saveLocal();
+        displayListEmployees(listEmployees);
+    }
 });
 
 function displayListEmployees(listEm) {
@@ -58,7 +68,7 @@ function handleDelete(codeEmployee) {
     displayListEmployees(listEmployees);
 };
 
-function handleUpdate(codeEmployee){
+function handleUpdate(codeEmployee) {
     document.getElementById("header-title").innerHTML = "Sửa nhân viên";
     document.getElementById("btnThemNV").style.display = "none";
     document.getElementById("btnCapNhat").style.display = "block";
@@ -75,7 +85,7 @@ function handleUpdate(codeEmployee){
     document.getElementById("chucvu").value = listEmployees[index].position;
 }
 
-document.getElementById("btnCapNhat").addEventListener("click", function(){
+document.getElementById("btnCapNhat").addEventListener("click", function () {
     var _code = document.getElementById("msnv").value;
     var _name = document.getElementById("name").value;
     var _email = document.getElementById("email").value;
@@ -92,17 +102,17 @@ document.getElementById("btnCapNhat").addEventListener("click", function(){
     displayListEmployees(listEmployees);
 });
 
-function saveLocal(){
-    localStorage.setItem("listEmployees",JSON.stringify(listEmployees));
+function saveLocal() {
+    localStorage.setItem("listEmployees", JSON.stringify(listEmployees));
 };
 
-function getLocal(){
-    if(localStorage.getItem("ListEmployees")){
+function getLocal() {
+    if (localStorage.getItem("ListEmployees")) {
         listEmployees = JSON.parse(localStorage.getItem("ListEmployees"));
     }
 };
 
-document.getElementById("searchName").addEventListener("keyup", function(event){
+document.getElementById("searchName").addEventListener("keyup", function (event) {
     // var keyWord = document.getElementById("searchName").value; //WAY1
     var keyWord = event.target.value;
 
@@ -114,7 +124,7 @@ document.getElementById("searchName").addEventListener("keyup", function(event){
     //     }
     // }
     var listEmployeesSearch = listEmployees.filter(employee => employee.name.includes(keyWord));
-  
+
     console.log(listEmployeesSearch);
     displayListEmployees(listEmployeesSearch);
 });
