@@ -24,7 +24,7 @@ document.getElementById('calc').onclick = (event) => {
         let value = input.value;
         let id = input.id;
 
-        employee = { ...employee, [id]: value };
+        employee[id] = value;
     }
     arrEmployee.push(employee);
     displayEmployee(arrEmployee);
@@ -39,7 +39,7 @@ const displayEmployee = (arr) => {
         for (let property in arr[i]) {
             contentTable += `<td>${arr[i][property]}</td>`;
         }
-        contentTable += `<td>${arr[i].coefficient * arr[i].salary}</td>`;
+        contentTable += `<td>${arr[i].calcSalary()}</td>`;
         contentTable += `</tr>`;
     }
 

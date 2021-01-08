@@ -6,4 +6,7 @@ export class Employee {
         this.salary = salary;
         this.coefficient = coefficientPos;
     }
+    calcSalary() {
+        return this.coefficient * this.salary;
+    }
 }
