@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Dashboard Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/lib/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/dashboard.css" rel="stylesheet">
+    <link href="../../assets/css/foodForm.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">CyberFood</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link " href="./index.html">
+                        <i class="fa fa-home"></i>
+                        Dashboard 
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./food.html">
+                        <i class="fa fa-utensils"></i>
+                        Add Food<span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./food-list.html">
+                        <i class="fa fa-list"></i>
+                        Food List 1
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./food-list2.html">
+                            <i class="fa fa-th-large"></i>
+                          Food List 2 
+                        </a>
+                      </li>
+                           
+                  </ul>
+        
+                  
+                </div>
+              </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
+                <nav class="my-3" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Food</li>
+                    </ol>
+                </nav>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>ADD FOOD FORM</h5>
+                            </div>
+                            <div class="card-body">
+
+                                <form class="needs-validation" id="foodForm">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="foodID">Mã Món</label>
+                                            <input type="text" class="form-control" id="codeFood" placeholder="Nhập ID"
+                                                value="" required>
+                                            <div id="invalidID" class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="tenMon">Tên Món</label>
+                                            <input type="text" class="form-control" id="nameFood"
+                                                placeholder="Nhập tên món" required>
+                                            <div id="invalidTen" class="invalid-form">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="loai">Loại Món</label>
+                                            <select class="custom-select d-block w-100" id="typeFood" required>
+                                                <option value="">Chọn loại</option>
+                                                <option value="loai1">Chay</option>
+                                                <option value="loai2">Mặn</option>
+                                            </select>
+                                            <div id="invalidLoai" class="invalid-feedback">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="giaMon">Giá Món</label>
+                                            <input type="text" class="form-control" id="price" placeholder="Nhập giá"
+                                                value="" required>
+                                            <div id="invalidGia" class="invalid-feedback">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="khuyenMai">Khuyến Mãi (%)</label>
+                                            <select class="custom-select d-block w-100" id="promotion" required>
+                                                <option value="">Chọn khuyến mãi</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                            </select>
+                                            <div id="invalidKM" class="invalid-feedback">
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-3">
+                                            <label for="tinhTrang">Tình Trạng</label>
+                                            <select class="custom-select d-block w-100" id="status" required>
+                                              <option value="">Chọn tình trạng</option>
+                                              <option value="0">Hết</option>
+                                              <option value="1">Còn</option>
+                                              
+                                            </select>
+                                            <div id="invalidTT" class="invalid-feedback">
+                            
+                                            </div>
+                                          </div> 
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="hinhMon">Hình Món Ăn</label>
+                                            <input type="file" class="form-control-file" id="imgFood">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="moTa">Mô Tả</label>
+                                        <textarea class="form-control" id="descrition" rows="3"></textarea>
+                                        <div id="invalidMoTa" class="invalid-form">
+                                        </div>
+                                    </div>
+                                    <hr class="mb-4">
+                                    <button id="btnThemMon" class="btn btn-warning btn-lg btn-block" type="button">Thêm Món</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card foodDetail">
+                            <div class="card-header">
+                                <h5>FOOD DETAILS</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <img id="imgMonAn" src="" alt="hình món ăn">
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Mã Món</h6>
+                                        </div>
+                                        <span id="spMa" class="text-muted"></span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Tên Món</h6>
+                                        </div>
+                                        <span id="spTenMon" class="text-muted"></span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Loại Món</h6>
+                                        </div>
+                                        <span id="spLoaiMon" class="text-muted">
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Giá Món</h6>
+                                        </div>
+                                        <span id="spGia" class="text-muted">
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Khuyến Mãi</h6>
+                                        </div>
+                                        <span id="spKM" class="text-muted">
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Giá KM</h6>
+                                        </div>
+                                        <span id="spGiaKM" class="text-muted">
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Tình Trạng</h6>
+                                        </div>
+                                        <span id="spTT" class="text-muted">
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6>Mô tả</h6>
+
+                                            <p id="pMoTa" class="text-muted">
+                                            </p>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </main>
+
+        </div>
+    </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2020 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    <script src="../../assets/lib/js/Jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../assets/lib/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="../../assets/lib/js/feather/feather.min.js"></script> -->
+    <!-- <script src="../../assets/lib/js/chart/Chart.min.js"></script> -->
+    <!-- <script src="../../assets/js/dashboard.js"></script> -->
+
+    <script type="module" src="../controllers/food.js"></script>
+</body>
+
+</html>
