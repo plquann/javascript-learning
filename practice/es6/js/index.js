@@ -30,16 +30,16 @@ document.getElementById('calc').onclick = (event) => {
     displayEmployee(arrEmployee);
 }
 
-const displayEmployee = (arr) => {
+const displayEmployee = (arrEm) => {
     let contentTable = ``;
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let em of arrEm) {
         contentTable += `<tr>`;
 
-        for (let property in arr[i]) {
-            contentTable += `<td>${arr[i][property]}</td>`;
+        for (let property in em) {
+            contentTable += `<td>${em[property]}</td>`;
         }
-        contentTable += `<td>${arr[i].calcSalary()}</td>`;
+        contentTable += `<td>${em.calcSalary()}</td>`;
         contentTable += `</tr>`;
     }
 
