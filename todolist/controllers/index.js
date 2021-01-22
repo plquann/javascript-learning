@@ -21,8 +21,8 @@ const renderTasks = (data) => {
         return content += `
         <li>
         <span class = "w-75" style="cursor: pointer;">${task.taskName}</span>    
-            <a class="buttons text-right" style="cursor: pointer;"><i class="fa fa-trash"></i></a>
-            <a class="buttons" style="cursor: pointer;"><i class="fa fa-check"></i></a>
+            <span class="buttons text-right" style="cursor: pointer;" onclick="delTask('${task.taskName}')"><i class="fa fa-trash"></i></span>
+            <span class="buttons" style="cursor: pointer;" onclick="doneTask('${task.taskName}')"><i class="fa fa-check"></i></span>
         </li>
         `
     }, ``);
@@ -31,8 +31,8 @@ const renderTasks = (data) => {
         return content += `
         <li>
             <span class = "w-75" style="cursor: pointer;">${task.taskName}</span>
-            <a class="buttons" style="cursor: pointer;"><i class="fa fa-trash"></i></a>
-            <a class="buttons" style="cursor: pointer;"><i class="fa fa-redo"></i></a>
+            <span class="buttons" style="cursor: pointer;" onclick="delTask('${task.taskName}')"><i class="fa fa-trash"></i></span>
+            <span class="buttons" style="cursor: pointer;" onclick="rejectTask('${task.taskName}')"><i class="fa fa-redo"></i></span>
         </li>
         `
     }, ``);
@@ -52,5 +52,32 @@ document.getElementById('addItem').onclick =async (event) => {
         getAllTasks();
     } catch (error) {
         console.log(error);
+    }
+}
+
+window.delTask = async (taskName) => {
+    try {
+        const result = await taskService.deleteTask(taskName);
+        getAllTasks();
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+window.doneTask = async (taskName) => {
+    try {
+        const result = await taskService.doneTask(taskName);
+        getAllTasks();
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+window.rejectTask = async (taskName) => {
+    try {
+        const result = await taskService.rejectTask(taskName);
+        getAllTasks();
+    } catch (err) {
+        console.log(err);
     }
 }

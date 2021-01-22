@@ -1,26 +1,23 @@
-export class TaskService {
-    
-    constructor(){
+import { BaseService } from "./BaseService.js";
 
-    }
-    getAllTasks(){
-        return axios({
-            url: 'http://svcy.myclass.vn/api/ToDoList/GetAllTask',
-            method: 'GET',
-        });
-    }
-    addTask(task){
-        return axios({
-            url: 'http://svcy.myclass.vn/api/ToDoList/AddTask',
-            method: 'POST',
-            data: task,
-        });
-    }
-    deleteTask(taskName){
-        return axios({
-            url: `http://svcy.myclass.vn/api/ToDoList/deleteTask?taskName=${taskName}`,
-            method: 'DELETE',
-        }); 
-    }
+export class TaskService extends BaseService {
 
+    constructor() {
+        super();
+    }
+    getAllTasks() {
+        return this.get('http://svcy.myclass.vn/api/ToDoList/GetAllTask');
+    }
+    addTask(task) {
+        return this.post('http://svcy.myclass.vn/api/ToDoList/AddTask',task);
+    }
+    deleteTask(taskName) {
+        return this.delete(`http://svcy.myclass.vn/api/ToDoList/deleteTask?taskName=${taskName}`);
+    }
+    doneTask(taskName) {
+        return this.put(`http://svcy.myclass.vn/api/ToDoList/doneTask?taskName=${taskName}`);
+    }
+    rejectTask(taskName) {
+        return this.put(`http://svcy.myclass.vn/api/ToDoList/rejectTask?taskName=${taskName}`);
+    }
 }
