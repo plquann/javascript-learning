@@ -80,6 +80,7 @@ document.getElementById('btnUpdateAlbum').onclick = () => {
     
     gallery.saveGallery();
     renderAlbum(gallery.listAlbum);
+    document.getElementById('name').disabled = false;
     document.getElementById('btnAddAlbum').disabled = false;
     document.getElementById('btnUpdateAlbum').disabled = true;
 }
