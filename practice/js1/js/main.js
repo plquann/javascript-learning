@@ -10,7 +10,7 @@
  *         area = length*width ; perimeter = (length + width)*2
  *  Step5: Show result for users
  * 
- * Block3: Area anf perimeter of rectangle
+ * Block3: Area and perimeter of rectangle
  */
 document.getElementById("btnCalc").onclick = function () {
     var length = Number(document.getElementById("length").value);
